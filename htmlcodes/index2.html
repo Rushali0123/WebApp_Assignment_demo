@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../assets/styles2.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="main">
+
+        <!-- HEADER -->
+        <div class="header">
+            <div class="logo">
+                <h3>DEMATEL</h3>
+            </div>
+        </div>
+
+        <!-- HERO SECTION -->
+        <div class="hero">
+            <div class="right">
+                <p class="title">Enter the number of parameters</p>
+                <!-- <p class="subtitle">Let us know what you're in for today!</p>                 -->
+                <div class="box">
+                    <div class="quantity">
+                      <span class="quantity-add quantity-button"></span>
+                        <input type="number" step="1" min="1" value="1" id="table">
+                        <span class="quantity-remove quantity-button"></span>
+                    </div>
+                  </div>
+            </div>
+            <div class="left">
+                <img src="../assets/featured-bash-math-arithmetic_hu7e1f615075fb3b83d7284184e23a8310_3867519_1024x0_resize_q35_bgffffff_box_3.jpg"
+                    alt="test image">
+            </div>
+        </div>
+
+        <div class="table">
+            <table id="myTable" style="border: 1;">
+            </table>
+            <form>
+                <input type="button" onclick="createTable()" value="Create the table" class="button">
+            </form>
+
+        </div>
+
+        <script>
+            const slidevalue = document.querySelector("span")
+            const inputslider = document.querySelector("input")
+            inputslider.oninput = (() => {
+                let value = inputslider.value;
+                slidevalue.textContent = value;
+                slidevalue.style.left = (value) + "%";
+                slidevalue.classList.add("show");
+            });
+            inputslider.onblur = (() => {
+                slidevalue.classList.remove("show");
+            });
+
+
+            function createTable() {
+                rn = document.getElementById("table").value;
+                cn = rn;
+
+                for (var r = 0; r < parseInt(rn, 10); r++) {
+                    var x = document.getElementById('myTable').insertRow(r);
+                    for (var c = 0; c < parseInt(cn, 10); c++) {
+                        var y = x.insertCell(c);
+                        y.innerHTML = "Row-" + r + " Column-" + c;
+                    }
+                }
+            }
+
+            $('.quantity-button').off('click').on('click', function () {
+  
+  if ($(this).hasClass('quantity-add')) {
+    var addValue = parseInt($(this).parent().find('input').val()) + 1;
+		$(this).parent().find('input').val(addValue).trigger('change');
+	}
+
+	if ($(this).hasClass('quantity-remove')) {
+    var removeValue = parseInt($(this).parent().find('input').val()) - 1;
+		if( removeValue == 0 ) {
+      removeValue = 1;
+		}
+		$(this).parent().find('input').val(removeValue).trigger('change');
+	}
+
+});
+
+
+$('.quantity input').off('change').on('change', function() {
+  console.log($(this).val());
+});
+        </script>
+<script src="../assets/script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+
+</body>
+
+</html>

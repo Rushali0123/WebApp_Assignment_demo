@@ -1,0 +1,173 @@
+
+    .header {
+background-color: #495C83;
+margin: 0;
+padding: 15px 0;
+display: flex;
+justify-content: space-around;
+align-items: center;
+
+}
+
+.logo {
+font-size: 24px;
+color: #F9FAF8;
+}
+
+.nav a {
+text-decoration: none;
+color: #E5E7EB;
+font-size: 18px;
+font-weight: 300;
+margin: 10px;
+padding: 5px;
+}
+
+/* HERO SECTION */
+
+.hero {
+background-color: #A6D1E6;
+padding: 90px 70px;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.right {
+width: 500px;
+}
+
+.here{
+    font-size: 50px;
+    font-weight: 700;
+    color: #F9FAF8;
+}
+
+.title {
+font-size: 48px;
+font-weight: 700;
+line-height: 1em;
+color: #F9FAF8;
+}
+
+.subtitle {
+color: #E5E7EB;
+font-size: 18px;
+font-weight: 300;
+margin: 15px 0;
+}
+
+.signup {
+color: #F9FAF8;
+background-color: #3882f6;
+font-size: 18px;
+padding: 8px 25px;
+border: none;
+border-radius: 8px;
+flex-shrink: 0;
+}
+.signup:hover{
+background-color: #E5E7EB;
+
+}
+
+.left img {
+width: 400px;
+height: auto;
+border-radius: 15px;
+}
+
+.box {
+    width: 100%;
+    padding: 2em;
+    text-align: center;
+}
+  
+  .quantity {
+    position: relative;
+    display: inline-block;
+    color: #7f7f7f;
+  
+      input[type="number"] {
+      transition: border .3s ease-in-out, color .3s ease-in-out;
+      -webkit-appearance: textfield;
+      -moz-appearance: textfield;
+        appearance: textfield;
+      font-family: Arial, sans-serif;
+          font-size: 14px;
+        line-height: 24px;
+          font-weight: 700;
+          box-shadow:	none;
+          outline: none; 
+          width: 42px;
+          height:	34px;
+          text-align:	center;
+          float: right;
+        border:	1px solid #dcdcdc;
+        background-color: #fff;
+          color: #342f2f;
+  
+          &:focus {
+            border-color: #57b8f6 !important;
+          }
+  
+          &:hover {
+            border-color: #a5a5a5;
+          }
+      }
+  
+      &-button {
+        width: 39px;
+          height: 34px;
+          display: inline-block;
+          float: right;
+          position:	relative;
+      cursor: pointer;
+  
+        &::before,
+        &::after {
+        position: absolute;
+        top: calc(50% - 1px);
+        left: calc(50% - 7px);
+        content: '';
+        width: 14px;
+        height: 2px;
+        background-color: currentColor;
+        display: block;
+        }
+      }
+  
+      &-remove {
+        &::after {
+        display: none;
+        }
+      }
+  
+      &-add {
+        &::after {
+        transform: rotate(90deg);
+        }
+      }
+  }
+
+.table{
+    background-color: #ddd;
+    height: 200px;
+
+}
+
+.button {
+    
+    color: white;
+	background-color: blue;
+    width: 15%;
+	border: 5px solid transparent;
+	transition: .2s ease;
+	border-radius: 50px;
+}
+.button:hover{
+    color: blue;
+	background-color: white;
+	transform: scale(1.1);
+	border: 5px solid blue;
+
+}
