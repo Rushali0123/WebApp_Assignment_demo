@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../public/styles/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../public/styles/css/projectInfo.css">
+    <script src="../public/styles/bootstrap/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <!-- Header starts -->
+    <nav class="navbar navbar-dark bg-info">
+        <div class="container-fluid">
+            <span class="navbar-brand mb-0 h1">Dematel Software</span>
+        </div>
+    </nav>
+    <!-- Header ends -->
+
+    <!-- Home page content starts -->
+    <div class="container mt-5">
+        <!-- Content here -->
+        <div class="row">
+            <div class="col-2"></div>
+            <div class="col-8">
+                <div class="card text-center">
+                    <div class="card-header">
+                    </div>
+                    <div class="card-body">
+                        <div>
+                            <p>Criteria</p>
+                            <div>
+                                <label class="form-label" for="numberOfCriteras">Number of Criteria :</label>
+                                <input type="number" class="form-control m-3" name="" id="numberOfCriteras" max="5"
+                                    min="2" value="4">
+                                <button class="btn btn-info text-white" id="numberOfCriteraBtn">Create table of
+                                    criteria</button>
+                            </div>
+                            <div class="criteria-table">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <div class="row">
+                            <div class="col-9">
+                                <p class="text-danger">
+                                    NOTE : Number of criteria should range from 2-5 only.
+                                </p>
+                            </div>
+                            <div class="col-3">
+                                <a href="javascript:void(0);" class="btn btn-info text-white" id="projectInfoSubmit">&nbsp; Next &nbsp;</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-2"></div>
+        </div>
+    </div>
+    <!-- Home page content ends -->
+
+    <!-- Including JS scripts -->
+    <script src="../public//scripts/js/projectInfo.js"></script>
+</body>
+
+</html>

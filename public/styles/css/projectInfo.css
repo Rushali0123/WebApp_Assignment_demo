@@ -1,0 +1,12 @@
+label[for="numberOfCriteras"]{
+    display: inline;
+}
+
+input[type='number']{
+    display: inline;
+    width: 30%;
+}
+
+input[type='number'] + button{
+    width: 30%;
+}
