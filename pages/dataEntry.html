@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../public/styles/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../public/styles/css/projectInfo.css">
+    <link rel="stylesheet" href="../public/styles/css/dataEntry.css">
     <script src="../public/styles/bootstrap/js/bootstrap.min.js"></script>
 </head>
 
@@ -23,48 +23,46 @@
     <!-- Home page content starts -->
     <div class="container mt-5">
         <!-- Content here -->
-        <div class="row">
-            <div class="col-2"></div>
-            <div class="col-8">
-                <div class="card text-center">
-                    <div class="card-header">
-                    </div>
+        <div class="card">
+            <div class="card-body">
+                <div class="d-flex justify-content-between align-items-center">
+                    <button type="button" class="btn btn-info text-white" id="addExpert">&nbsp; <span
+                            style="font-weight: 900;">+</span> Add Expert &nbsp;</button>
+                    <p><span class="h6">Total Experts Added : </span><span id="totalExperts"></span></p>
+                    <button class="btn btn-info text-white" id="showMeanTable">&nbsp; Mean
+                        &nbsp;</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-4">
+            <div class="col">
+                <div class="card">
                     <div class="card-body">
                         <div>
-                            <p>Criteria</p>
-                            <div>
-                                <label class="form-label" for="numberOfCriteras">Number of Criteria :</label>
-                                <input type="number" class="form-control m-3" name="" id="numberOfCriteras" max="5"
-                                    min="2" value="4">
-                                <button class="btn btn-info text-white" id="numberOfCriteraBtn">Create table of
-                                    criteria</button>
-                            </div>
-                            <div class="criteria-table">
+                            <p><span>Decision Matrix (Expert </span><span id="currentExpert"></span><span>)</span></p>
+                            <div id="decisionMatrix">
                             </div>
                         </div>
                     </div>
                     <div class="card-footer">
-                        <div class="row">
-                            <div class="col-9">
-                                <p class="text-danger">
-                                    NOTE : Number of criteria should range from 2-5 only.
-                                </p>
-                            </div>
-                            <div class="col-3">
-                                <a href="javascript:void(0);" class="btn btn-info text-white" id="projectInfoSubmit">&nbsp; Next &nbsp;</a>
-                            </div>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <p class="text-danger">
+                                NOTE : Criteria values should range from 0-4 only.
+                            </p>
+                            <a onclick="submitDataForm()" class="btn btn-info text-white">&nbsp;
+                                Next &nbsp;</a>
                         </div>
                     </div>
                 </div>
 
             </div>
-            <div class="col-2"></div>
         </div>
     </div>
     <!-- Home page content ends -->
 
     <!-- Including JS scripts -->
-    <script src="../public//scripts/js/projectInfo.js"></script>
+    <script src="../public//scripts/js/dataEntry.js"></script>
 </body>
 
 </html>
